@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block contents %}
+
+<div class="row">
+    <div class="col">
+        <h1>로그인</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {{error}}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <form method="POST" , action=".">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class= "form-group" id="" placeholder="" name="">
+                </div>
+            {% endfor %}
+            <!-- <div class="form-group">
+                <label for="username">사용자 이름</label>
+                <input type="text" class="form-control" id="username" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div> -->
+            <button type="submit" class="btn btn-primary">로그인</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
